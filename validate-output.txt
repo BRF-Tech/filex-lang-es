@@ -1,0 +1,165 @@
+# node scripts/pack.mjs build --check
+filex-app.json is up to date.
+
+# node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
+filex language pack validator
+  catalogue : catalogue (filex 0.43.0) — 3588 strings (227 of them the server's: e-mails, public pages, notifications)
+  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+  pack      : filex-app.json (filex-app.json)
+
+[es] 100% translated — 3588 of 3588 strings; the other 0 show in English
+  113 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+  plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
+  9 plural key(s) lack a form for one of those categories and show the plain form for it
+  errors: 0 (none) · warnings: 0 (none)
+  plural      inspector.activity.version: lacks inspector.activity.version_one
+  plural      inspector.versions.v: lacks inspector.versions.v_one
+  plural      opc.percent: lacks opc.percent_one
+  plural      server.app.wake.beyond: lacks server.app.wake.beyond_one
+  plural      sidenav.tags.more: lacks sidenav.tags.more_one
+  plural      tour.progress: lacks tour.progress_one
+  plural      tz.more: lacks tz.more_one
+  plural      viewer.counter: lacks viewer.counter_one
+  plural      viewer.page_n_of_m: lacks viewer.page_n_of_m_one
+
+# node scripts/style-check.mjs
+filex Spanish pack — style check
+  catalogue    : catalogue (filex 0.43.0) — 3588 strings
+                 admin 1832 (vue-i18n) · explorer 1587 (plain {name}) · 58 in both · server 227 (mails, public pages, notifications)
+  plurals      : one, other — 4 extra form key(s) beyond the catalogue
+  pack         : translations\es.json  (3592 strings)
+  syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+
+Errors  : 0 (none)
+Warnings: 0 (none)
+Consistency: 42 short English labels translated more than one way (see below)
+
+Same English, different Spanish (review — context may justify it):
+  "All"
+      "Todos"  <- apiMcp.scopeAll, common.all
+      "Todo"  <- search.scopeAll
+  "Delete"
+      "Eliminación"  <- apiMcp.scopeName.delete, queue.type.delete, opc.kind.delete
+      "Eliminar"  <- common.delete, versions.purge, ctx.delete, shortcuts.delete
+  "{name} removed"
+      "{name} quitada"  <- appPlugins.deleted
+      "{name} quitado"  <- plugins.deleted
+  "Enabled"
+      "Activada"  <- appPlugins.detail.overrides.enabled, appPlugins.fields.enabled, profile.totp.enabled, replica.rules.fields.enabled
+      "Activado"  <- common.enabled, plugins.fields.enabled, webhooks.fields.enabled
+  "Due"
+      "Vence"  <- appPlugins.detail.schedule.due
+      "Pendiente"  <- appPlugins.detail.schedule.statuses.due
+  "Failed"
+      "Fallida"  <- appPlugins.detail.schedule.statuses.failed, appPlugins.state.failed
+      "Fallido"  <- appearance.previewDanger, notifications.webhookStatus.failed, plugins.state.failed, queue.status.failed (+1)
+      "Fallidos"  <- queue.stats.failed, replica.report.fields.failedCount
+  "Updated"
+      "Actualizada"  <- appPlugins.detail.updated
+      "Actualizado"  <- common.updated
+      "Actualizados"  <- dashboard.updatedFiles, sync.fields.updated
+  "Label"
+      "Título"  <- appPlugins.fields.label
+      "Descripción"  <- conn.nfs.col.label, conn.s3keys.col.label
+  "{name} installed"
+      "{name} instalada"  <- appPlugins.installed
+      "{name} instalado"  <- plugins.installed
+  "Off"
+      "Desactivada"  <- appPlugins.state.disabled
+      "Desactivado"  <- authProviders.status.disabled, plugins.state.disabled
+  "Refused"
+      "Rechazada"  <- appPlugins.state.refused
+      "Rechazado"  <- plugins.state.refused
+  "{name} upgraded"
+      "{name} actualizada"  <- appPlugins.upgraded
+      "{name} actualizado"  <- plugins.upgrade.done
+  "Install"
+      "Instalar"  <- appPlugins.wizard.install, install.install, plugins.install
+      "Instalación"  <- appPlugins.wizard.steps.done
+  "Upload"
+      "Subir"  <- appearance.previewUpload, plugin.sig.mode_upload, toolbar.upload
+      "Subida"  <- audit.target.upload, opc.kind.upload
+  "Pending"
+      "Pendiente"  <- appearance.previewWarn, common.pending, notifications.webhookStatus.pending, queue.status.pending (+1)
+      "Pendientes"  <- queue.stats.pending
+  "Auth providers"
+      "Proveedores de autenticación"  <- authProviders.title
+      "Proveedores de acceso"  <- nav.authProviders
+  "Copy"
+      "Copiar"  <- common.copy, desktop.copy, access.copy, conn.guide.copy (+6)
+      "Copia"  <- queue.type.copy, opc.kind.copy
+  "Disabled"
+      "Desactivado"  <- common.disabled, external.overall.disabled, external.states.disabled, conn.list.disabled
+      "Desactivada"  <- profile.totp.disabled
+  "OK"
+      "Aceptar"  <- common.ok
+      "Correcto"  <- sync.state.ok
+  "Search"
+      "Buscar"  <- common.search, advsearch.submit, toolbar.search, tour.step.search.title (+1)
+      "Búsqueda"  <- nav.search
+  "Added"
+      "Agregados"  <- dashboard.added, sync.fields.added
+      "Agregada"  <- conn.sshkeys.col.added
+  "Deleted"
+      "Eliminados"  <- dashboard.deleted, sync.fields.deleted
+      "Eliminado"  <- trash.col_deleted_at, col.deleted, toast.deleted
+  "Storages"
+      "Almacen."  <- dashboard.stats.storages
+      "Almacenamientos"  <- nav.storages, plugins.fields.inUse, storages.title, destpicker.drives (+1)
+  "Type"
+      "Tipo"  <- explore.cols.mime, queue.fields.type, settings.folderView.col_type, settings.folderView.sort_type (+4)
+      "Escribir"  <- plugin.sig.mode_type
+  "Sync runs"
+      "Sincronizaciones"  <- nav.sync
+      "Ejecuciones de sincronización"  <- sync.title
+  "New file"
+      "Archivo nuevo"  <- notifications.kinds.file_uploaded
+      "Nuevo archivo"  <- ctx.new_file
+  "Cancelled"
+      "Cancelado"  <- queue.cancelled, queue.status.cancelled, opc.status.aborted
+      "Cancelados"  <- queue.stats.cancelled
+  "Done"
+      "Completado"  <- queue.status.done, opc.status.done, upload.done
+      "Listo"  <- access.done, e2e.recovery.done, plugin.pdf.pad_done, tour.done
+  "Move"
+      "Movimiento"  <- queue.type.move, opc.kind.move
+      "Mover"  <- ctx.move
+  "Unlimited"
+      "Ilimitada"  <- quota.unlimited
+      "Sin límite"  <- access.ui.unlimited
+  "Share"
+      "Recurso compartido"  <- storages.fields.share
+      "Compartir"  <- access.ui.share, ctx.share, modal.share.create, shortcuts.share (+1)
+  "Empty trash"
+      "Vaciar la papelera"  <- trash.empty, trash.empty_modal_title, trash.empty_action
+      "Vaciado de la papelera"  <- opc.kind.trash
+  "Star"
+      "Destacado"  <- col.star
+      "Destacar"  <- ctx.star
+  "Access key ID"
+      "ID de clave de acceso"  <- conn.guide.s3.fact.key, conn.s3keys.accessKeyID
+      "ID de clave"  <- conn.s3keys.col.key
+  "Convert"
+      "Convertir"  <- convert.convert, convert.title, ctx.convert, shortcuts.convert
+      "Conversión"  <- opc.kind.convert
+  "Cut"
+      "Cortar"  <- ctx.cut, shortcuts.cut
+      "Cortado"  <- toast.cut
+  "Archive"
+      "Archivo comprimido"  <- ftype.archive
+      "Compresión"  <- opc.kind.archive
+  "Clear"
+      "Limpiar"  <- opc.clear
+      "Quitar"  <- plugin.file.clear
+  "Nothing here yet"
+      "Aún no hay nada aquí"  <- plugin.list.empty
+      "Todavía no hay nada aquí"  <- table.empty
+  "{n} selected"
+      "Seleccionados: {n}"  <- selection.count
+      "Seleccionado: {n}"  <- selection.count_one
+  "{count} refused ({reason})"
+      "{count} rechazadas ({reason})"  <- server.app.wake.refused
+      "{count} rechazada ({reason})"  <- server.app.wake.refused_one
+  "{count} scheduled"
+      "{count} programadas"  <- server.app.wake.scheduled
+      "{count} programada"  <- server.app.wake.scheduled_one
