@@ -13,8 +13,8 @@ the admin panel, the settings dialog and the public pages a share link opens —
 > against `translations/es.json`, and keep to the terminology in [`glossary.md`](glossary.md)
 > (or change the glossary first).
 
-- **Version** 0.1.1, for filex 0.44.0 · **catalogue** filex v0.44.0 · **coverage** 100% (3,728 of
-  3,728 strings, 233 of them the text the server writes) · 4 extra plural forms
+- **Version** 0.1.2, for filex 0.45.0 · **catalogue** filex v0.45.0 · **coverage** 100% (3,752 of
+  3,752 strings, 233 of them the text the server writes) · 4 extra plural forms
 - Neutral, international Spanish, addressing the reader as *usted*.
 
 ## Install
@@ -71,7 +71,7 @@ Full guide: [Writing a language pack](https://docs.filex.sh/PLUGIN-KIT#writing-a
 When a new filex version adds strings:
 
 ```bash
-node scripts/pack.mjs sync --from v0.45.0   # refresh catalogue/, add the new keys (empty)
+node scripts/pack.mjs sync --from v0.46.0   # refresh catalogue/, add the new keys (empty)
 ```
 
 Translate what is new, bump `version` in `filex-app.json`, build, and use **Upgrade** on the
@@ -83,7 +83,7 @@ pack's row in **Plugins → Apps**.
 filex-app.json                      the pack filex installs (written by `build`)
 translations/es.json                the translation — the file you edit
 glossary.md                         terminology, voice, and the decisions that were hard
-catalogue/                          every string of filex v0.44.0 in English, with context
+catalogue/                          every string of filex v0.45.0 in English, with context
 scripts/pack.mjs                    start · next · build · sync (from the template)
 scripts/validate.mjs                the filex validator (copied verbatim from the template)
 scripts/style-check.mjs             this pack's own checks
