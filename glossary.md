@@ -142,6 +142,13 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | search index | índice de búsqueda | |
 | storage scan / scan exclusions | escaneo / rutas excluidas del escaneo | the walk over a storage (*Escanear cada*); a virus scan stays *análisis* |
 | catalogue (what the scan records) | catálogo | "not catalogued" → *no se incorporan al catálogo* |
+| catalog (verb) / cataloged / cataloging (v0.44.0) | catalogar / catalogado / catalogando | *Catalogar todo*, *Carpetas catalogadas* |
+| lazy catalog (a sync mode) | catálogo diferido | as *carga diferida* for lazy loading; its behaviors *Primero lo que se abre, el resto en segundo plano* / *Solo al abrir*; the background pass → *pasada en segundo plano* (not *recorrido*, which is the tour) |
+| watch / watched (a folder, for changes made outside filex) | vigilar / vigilado | as *Vigilancia en vivo* |
+| usage (the storage-used figure) | espacio usado | as *{used} usados*; the *Uso y costo* page is a different thing |
+| archive (a .zip / .7z file) | archivo comprimido (pl. *archivos comprimidos*) | *archivo* alone is a file; admin "Archives" → *Archivos comprimidos*; "solid archive" → *archivo comprimido sólido* |
+| extract / extraction | extraer / extracción | "Extract here" → *Extraer aquí* |
+| package manager | gestor de paquetes | Homebrew, winget and Snap stay as written |
 | pattern (glob) | patrón (glob) | *Patrón de ruta*; the pattern itself (`.git`, `*.tmp`, `downloads/incomplete/**`) stays as written |
 | emptying the trash / server log | vaciado de la papelera / registro del servidor | "Emptying the trash…" → *Vaciando la papelera…* |
 | preview | vista previa | |

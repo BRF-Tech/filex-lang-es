@@ -3,15 +3,16 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.43.0) — 3588 strings (227 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.44.0) — 3728 strings (233 of them the server's: e-mails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 3588 of 3588 strings; the other 0 show in English
-  113 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 3728 of 3728 strings; the other 0 show in English
+  117 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
-  9 plural key(s) lack a form for one of those categories and show the plain form for it
+  10 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
+  plural      archive.dictionary_size_value: lacks archive.dictionary_size_value_one
   plural      inspector.activity.version: lacks inspector.activity.version_one
   plural      inspector.versions.v: lacks inspector.versions.v_one
   plural      opc.percent: lacks opc.percent_one
@@ -24,15 +25,15 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.43.0) — 3588 strings
-                 admin 1832 (vue-i18n) · explorer 1587 (plain {name}) · 58 in both · server 227 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.44.0) — 3728 strings
+                 admin 1904 (vue-i18n) · explorer 1649 (plain {name}) · 58 in both · server 233 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (3592 strings)
+  pack         : translations\es.json  (3732 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 42 short English labels translated more than one way (see below)
+Consistency: 44 short English labels translated more than one way (see below)
 
 Same English, different Spanish (review — context may justify it):
   "All"
@@ -82,6 +83,9 @@ Same English, different Spanish (review — context may justify it):
   "Pending"
       "Pendiente"  <- appearance.previewWarn, common.pending, notifications.webhookStatus.pending, queue.status.pending (+1)
       "Pendientes"  <- queue.stats.pending
+  "Archives"
+      "Archivos comprimidos"  <- archivesAdmin.title, nav.archives
+      "Comprimidos"  <- filter.type.archive
   "Auth providers"
       "Proveedores de autenticación"  <- authProviders.title
       "Proveedores de acceso"  <- nav.authProviders
@@ -115,11 +119,15 @@ Same English, different Spanish (review — context may justify it):
   "New file"
       "Archivo nuevo"  <- notifications.kinds.file_uploaded
       "Nuevo archivo"  <- ctx.new_file
+  "Archive"
+      "Compresión"  <- pendingOps.verb.archive, opc.kind.archive
+      "Archivo comprimido"  <- ftype.archive, viewer.archive.root
   "Cancelled"
       "Cancelado"  <- queue.cancelled, queue.status.cancelled, opc.status.aborted
       "Cancelados"  <- queue.stats.cancelled
   "Done"
       "Completado"  <- queue.status.done, opc.status.done, upload.done
+      "Completada"  <- storages.catalog.fillerState.converged
       "Listo"  <- access.done, e2e.recovery.done, plugin.pdf.pad_done, tour.done
   "Move"
       "Movimiento"  <- queue.type.move, opc.kind.move
@@ -133,6 +141,9 @@ Same English, different Spanish (review — context may justify it):
   "Empty trash"
       "Vaciar la papelera"  <- trash.empty, trash.empty_modal_title, trash.empty_action
       "Vaciado de la papelera"  <- opc.kind.trash
+  "Extract to folder"
+      "Carpeta de destino"  <- archive.destination_folder
+      "Extraer en carpeta"  <- archive.extract_to_folder
   "Star"
       "Destacado"  <- col.star
       "Destacar"  <- ctx.star
@@ -145,9 +156,6 @@ Same English, different Spanish (review — context may justify it):
   "Cut"
       "Cortar"  <- ctx.cut, shortcuts.cut
       "Cortado"  <- toast.cut
-  "Archive"
-      "Archivo comprimido"  <- ftype.archive
-      "Compresión"  <- opc.kind.archive
   "Clear"
       "Limpiar"  <- opc.clear
       "Quitar"  <- plugin.file.clear
