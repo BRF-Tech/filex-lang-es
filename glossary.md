@@ -152,6 +152,7 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | attempt / attempt timeout / give up after (a storage's network settings, v0.45.0) | intento / tiempo de espera por intento / abandonar tras | as *Tiempo de espera de conexión*; "Attempts per request" → *Intentos por solicitud*; retrying → *reintentos*; an S3 "store" is *almacenamiento*, as in the other S3 hints |
 | drag-out download (audit, v0.45.0) | descarga por arrastre | "downloaded by dragging it out" → *descargado al arrastrarlo fuera* |
 | what an update policy does here (badge, v0.45.0) | *Solo anuncia* / *Instala parches* / *Instala versiones menores* / *Comprobación desactivada* | third person, the install is the subject; the policy's own name stays an infinitive (*solo anunciar*) |
+| storage order (navigation panel and admin Storages, v0.46.0) | *Subir* / *Bajar* / *Ordenar por nombre* / *Usar el orden predeterminado* | short verbs, like the other row menus; *Restablecer el orden predeterminado* on the admin page |
 | pattern (glob) | patrón (glob) | *Patrón de ruta*; the pattern itself (`.git`, `*.tmp`, `downloads/incomplete/**`) stays as written |
 | emptying the trash / server log | vaciado de la papelera / registro del servidor | "Emptying the trash…" → *Vaciando la papelera…* |
 | preview | vista previa | |
