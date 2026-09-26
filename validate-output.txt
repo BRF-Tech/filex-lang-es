@@ -3,12 +3,12 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.46.1) — 3911 strings (240 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.47.0) — 3913 strings (240 of them the server's: e-mails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 3911 of 3911 strings; the other 0 show in English
-  118 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 3913 of 3913 strings; the other 0 show in English
+  119 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   10 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
@@ -25,10 +25,10 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.46.1) — 3911 strings
-                 admin 2007 (vue-i18n) · explorer 1738 (plain {name}) · 74 in both · server 240 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.47.0) — 3913 strings
+                 admin 2009 (vue-i18n) · explorer 1738 (plain {name}) · 74 in both · server 240 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (3915 strings)
+  pack         : translations\es.json  (3917 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
@@ -180,3 +180,4 @@ Same English, different Spanish (review — context may justify it):
   "{count} scheduled"
       "{count} programadas"  <- server.app.wake.scheduled
       "{count} programada"  <- server.app.wake.scheduled_one
+

@@ -1882,6 +1882,8 @@
   "install.dl.win_portable_hint": "Se ejecuta desde cualquier lugar — una memoria USB, Descargas — y guarda sus archivos junto a sí mismo. No se actualiza solo · ~92 MB",
   "install.dl.win_setup": "Instalador de Windows (.exe)",
   "install.dl.win_setup_hint": "Instala filex, lo agrega al menú Inicio y se actualiza solo · ~92 MB",
+  "install.dl.win_store": "Microsoft Store",
+  "install.dl.win_store_hint": "Firmada por Microsoft; la Store la instala y la mantiene actualizada, sin aviso de SmartScreen",
   "install.expand": "Mostrar detalles",
   "install.install": "Instalar",
   "install.iosInstructions": "Toque el botón Compartir y, luego, “Agregar a pantalla de inicio”.",

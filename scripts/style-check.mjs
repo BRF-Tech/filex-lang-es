@@ -206,6 +206,7 @@ const IDENTICAL_OK = new Set([
   'conn.tokens.rootPlaceholder', // syntax: storage://folder
   'e2e.recover.recovery_placeholder', // input mask XXXX-XXXX-…
   'archivesAdmin.providerSevenZip', // product name: 7-Zip
+  'install.dl.win_store', // product name: Microsoft Store
 ]);
 function identicalAllowed(key, en) {
   if (IDENTICAL_OK.has(key)) return true;
