@@ -33,7 +33,7 @@ do not switch terms.
 | `key` / `key_one` (explorer / server plurals) | one key per CLDR category; the plain key is `other` (see “Plurals” below) |
 | `{'@'}` | kept exactly (vue-i18n literal); never a bare `@` in an admin-SPA string |
 | `@` in explorer strings | literal, never escaped (the explorer's `t()` is a plain replace) |
-| the 55 keys in both tables | no `@`, no bar, no `{'…'}` at all — one value is drawn by both engines |
+| the keys in both tables (`in: both`, 74 in v0.47.0) | no `@`, no bar, no `{'…'}` at all — one value is drawn by both engines |
 | `%` right before `{` (admin) | write `{'%'}{percent}`; `%{x}` is vue-i18n's old modulo form and eats the `%` |
 | `` `code` `` spans, `<…>` tokens, env vars, CLI flags, paths, key combos | verbatim |
 | `tag:` search syntax | verbatim — the server parses it (`tag:factura` is fine; `etiqueta:` would not work) |
@@ -153,6 +153,9 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | drag-out download (audit, v0.45.0) | descarga por arrastre | "downloaded by dragging it out" → *descargado al arrastrarlo fuera* |
 | what an update policy does here (badge, v0.45.0) | *Solo anuncia* / *Instala parches* / *Instala versiones menores* / *Comprobación desactivada* | third person, the install is the subject; the policy's own name stays an infinitive (*solo anunciar*) |
 | storage order (navigation panel and admin Storages, v0.46.0) | *Subir* / *Bajar* / *Ordenar por nombre* / *Usar el orden predeterminado* | short verbs, like the other row menus; *Restablecer el orden predeterminado* on the admin page |
+| queued purge / restore / rename (operations panel and admin tray, v0.47.0) | kind: *Eliminación definitiva* / *Restauración* / *Cambio de nombre*; tray: *Eliminando definitivamente* / *Restaurando* / *Cambiando el nombre* | nouns beside *Eliminación*, *Movimiento*; the admin tray keeps its gerunds; column "Deleted by" → *Eliminado por* |
+| a count that failed, beside the one that worked (v0.47.0) | *{failed} con error* | number-neutral, as in `access.ui.mail_partial`: *3 elementos restaurados; 1 con error: …* |
+| a dialog closed while it works (v0.47.0) | *Continuar* / *Detener y cerrar* | "this page says when it is done" → *esta página avisará cuando termine* |
 | pattern (glob) | patrón (glob) | *Patrón de ruta*; the pattern itself (`.git`, `*.tmp`, `downloads/incomplete/**`) stays as written |
 | emptying the trash / server log | vaciado de la papelera / registro del servidor | "Emptying the trash…" → *Vaciando la papelera…* |
 | preview | vista previa | |

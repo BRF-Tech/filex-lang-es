@@ -3,12 +3,12 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.45.0) — 3752 strings (233 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.46.0) — 3861 strings (233 of them the server's: e-mails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 3752 of 3752 strings; the other 0 show in English
-  117 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 3861 of 3861 strings; the other 0 show in English
+  118 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   10 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
@@ -25,15 +25,15 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.45.0) — 3752 strings
-                 admin 1928 (vue-i18n) · explorer 1662 (plain {name}) · 71 in both · server 233 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.46.0) — 3861 strings
+                 admin 1964 (vue-i18n) · explorer 1738 (plain {name}) · 74 in both · server 233 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (3756 strings)
+  pack         : translations\es.json  (3865 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 44 short English labels translated more than one way (see below)
+Consistency: 47 short English labels translated more than one way (see below)
 
 Same English, different Spanish (review — context may justify it):
   "All"
@@ -141,6 +141,9 @@ Same English, different Spanish (review — context may justify it):
   "Empty trash"
       "Vaciar la papelera"  <- trash.empty, trash.empty_modal_title, trash.empty_action
       "Vaciado de la papelera"  <- opc.kind.trash
+  "Restore"
+      "Restaurar"  <- trash.restore, versions.restore, ctx.restore, inspector.versions.restore
+      "Restauración"  <- opc.kind.restore
   "Extract to folder"
       "Carpeta de destino"  <- archive.destination_folder
       "Extraer en carpeta"  <- archive.extract_to_folder
@@ -156,6 +159,12 @@ Same English, different Spanish (review — context may justify it):
   "Cut"
       "Cortar"  <- ctx.cut, shortcuts.cut
       "Cortado"  <- toast.cut
+  "Delete permanently"
+      "Eliminar definitivamente"  <- ctx.delete_perm, modal.delete.permanent_confirm
+      "Eliminación definitiva"  <- opc.kind.purge
+  "Rename"
+      "Cambiar nombre"  <- ctx.rename, modal.rename.title, shortcuts.rename
+      "Cambio de nombre"  <- opc.kind.rename
   "Clear"
       "Limpiar"  <- opc.clear
       "Quitar"  <- plugin.file.clear
