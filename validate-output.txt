@@ -3,16 +3,17 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.47.0) — 3913 strings (240 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.48.0) — 4238 strings (255 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 3913 of 3913 strings; the other 0 show in English
-  119 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 4238 of 4238 strings; the other 0 show in English
+  122 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
-  10 plural key(s) lack a form for one of those categories and show the plain form for it
+  11 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
   plural      archive.dictionary_size_value: lacks archive.dictionary_size_value_one
+  plural      drafts.count_of: lacks drafts.count_of_one
   plural      inspector.activity.version: lacks inspector.activity.version_one
   plural      inspector.versions.v: lacks inspector.versions.v_one
   plural      opc.percent: lacks opc.percent_one
@@ -25,15 +26,15 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.47.0) — 3913 strings
-                 admin 2009 (vue-i18n) · explorer 1738 (plain {name}) · 74 in both · server 240 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.48.0) — 4238 strings
+                 admin 2083 (vue-i18n) · explorer 2140 (plain {name}) · 240 in both · server 255 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (3917 strings)
+  pack         : translations\es.json  (4242 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 47 short English labels translated more than one way (see below)
+Consistency: 49 short English labels translated more than one way (see below)
 
 Same English, different Spanish (review — context may justify it):
   "All"
@@ -71,9 +72,15 @@ Same English, different Spanish (review — context may justify it):
   "Refused"
       "Rechazada"  <- appPlugins.state.refused
       "Rechazado"  <- plugins.state.refused
+  "Up to date"
+      "Está actualizada"  <- appPlugins.update.upToDate
+      "Actualizado"  <- plugins.update.upToDate
   "{name} upgraded"
       "{name} actualizada"  <- appPlugins.upgraded
       "{name} actualizado"  <- plugins.upgrade.done
+  "Added"
+      "Agregados"  <- appPlugins.wizard.diff.filesAdded, dashboard.added, sync.fields.added
+      "Agregada"  <- conn.sshkeys.col.added
   "Install"
       "Instalar"  <- appPlugins.wizard.install, install.install, plugins.install
       "Instalación"  <- appPlugins.wizard.steps.done
@@ -90,20 +97,20 @@ Same English, different Spanish (review — context may justify it):
       "Proveedores de autenticación"  <- authProviders.title
       "Proveedores de acceso"  <- nav.authProviders
   "Copy"
-      "Copiar"  <- common.copy, desktop.copy, access.copy, conn.guide.copy (+6)
+      "Copiar"  <- common.copy, desktop.copy, access.copy, conn.guide.copy (+7)
       "Copia"  <- queue.type.copy, opc.kind.copy
   "Disabled"
       "Desactivado"  <- common.disabled, external.overall.disabled, external.states.disabled, conn.list.disabled
       "Desactivada"  <- profile.totp.disabled
+  "New password"
+      "Nueva contraseña"  <- common.newPassword, users.resetPasswordTitle
+      "Contraseña nueva"  <- e2e.password.new
   "OK"
       "Aceptar"  <- common.ok
       "Correcto"  <- sync.state.ok
   "Search"
       "Buscar"  <- common.search, advsearch.submit, toolbar.search, tour.step.search.title (+1)
       "Búsqueda"  <- nav.search
-  "Added"
-      "Agregados"  <- dashboard.added, sync.fields.added
-      "Agregada"  <- conn.sshkeys.col.added
   "Deleted"
       "Eliminados"  <- dashboard.deleted, sync.fields.deleted
       "Eliminado"  <- trash.col_deleted_at, col.deleted, toast.deleted
@@ -153,9 +160,6 @@ Same English, different Spanish (review — context may justify it):
   "Access key ID"
       "ID de clave de acceso"  <- conn.guide.s3.fact.key, conn.s3keys.accessKeyID
       "ID de clave"  <- conn.s3keys.col.key
-  "Convert"
-      "Convertir"  <- convert.convert, convert.title, ctx.convert, shortcuts.convert
-      "Conversión"  <- opc.kind.convert
   "Cut"
       "Cortar"  <- ctx.cut, shortcuts.cut
       "Cortado"  <- toast.cut
@@ -165,6 +169,9 @@ Same English, different Spanish (review — context may justify it):
   "Rename"
       "Cambiar nombre"  <- ctx.rename, modal.rename.title, shortcuts.rename
       "Cambio de nombre"  <- opc.kind.rename
+  "Change password…"
+      "Cambiar la contraseña…"  <- e2e.fxe.ctx_password
+      "Cambiar contraseña…"  <- e2e.password.strip_action
   "Clear"
       "Limpiar"  <- opc.clear
       "Quitar"  <- plugin.file.clear
@@ -180,4 +187,3 @@ Same English, different Spanish (review — context may justify it):
   "{count} scheduled"
       "{count} programadas"  <- server.app.wake.scheduled
       "{count} programada"  <- server.app.wake.scheduled_one
-
