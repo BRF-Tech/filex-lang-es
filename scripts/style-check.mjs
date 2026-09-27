@@ -207,6 +207,9 @@ const IDENTICAL_OK = new Set([
   'e2e.recover.recovery_placeholder', // input mask XXXX-XXXX-…
   'archivesAdmin.providerSevenZip', // product name: 7-Zip
   'install.dl.win_store', // product name: Microsoft Store
+  'install.dl.linux_snap', // product name: Snap Store
+  'install.dl.mac_brew', // product name: Homebrew
+  'install.dl.rpm', // distribution names + file type: Fedora / openSUSE (.rpm)
 ]);
 function identicalAllowed(key, en) {
   if (IDENTICAL_OK.has(key)) return true;
