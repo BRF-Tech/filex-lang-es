@@ -199,6 +199,26 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | slot (a free concurrency slot) | espacio (libre) | not *hueco* (Spain-colloquial) |
 | mouse | — | avoided: *ratón* is Spain-only, *mouse* Latin-American. Rephrased ("al hacer clic", "con el puntero") |
 | backend | backend | kept, as developers say it |
+| role (a named set of permissions; every person has exactly one, v0.49.0) | rol (pl. *roles*) | page and side nav "Roles" → *Roles*; "New role" → *Nuevo rol*; "Role name" → *Nombre del rol* |
+| built-in role (Administrator / User / Viewer) | rol integrado | badge "Built-in" → *Integrado*; the three names stay *Administrador / Usuario / Lector*; "Edit the {role} role" → *Editar el rol {role}* |
+| custom role | rol personalizado | badge "Custom" → *Personalizado*; its name is the administrator's own text, never translated (`{rule}`, `{name}`, `{role}`) |
+| permission (what a role allows, v0.49.0) | permiso (pl. *permisos*) | the same word as an API key's permission; "{count} of {total} permissions" → *{count} de {total} permisos* |
+| exception (a per-person override) | excepción (pl. *excepciones*) | "Exceptions for this person" → *Excepciones para esta persona*; "Clear exceptions" → *Borrar excepciones*; audit "exceptions changed" → *excepciones cambiadas* |
+| Inherit / Allow / Deny (buttons) | Heredar / Permitir / Denegar | the role summary's "Allows: / Denies:" → *Permite: / Deniega:*; a group's "All / None" → *Todos / Ninguno* |
+| Allowed / Denied (the result beside a permission) | Permitido / Denegado | agree with *el permiso*; its source is a lowercase fragment after " · ": *rol integrado*, *rol “X”*, *excepción para esta persona*, *solo administradores*, *cuenta de solo lectura*, *el rol “X” está desactivado* |
+| preset (a ready-made set of ticks) | preajuste | "Preset:" → *Preajuste:*; Full admin / Standard user / Read-only / Upload-only / Guest / Custom → *Administrador completo / Usuario estándar / Solo lectura / Solo subida / Invitado*; the badge of a person whose permissions match no preset → *Permisos personalizados* (not *Personalizado*, the custom-role badge) |
+| limits (of a role) | límites | "Limits from roles" → *Límites de los roles*; "Largest file (MB)" → *Tamaño máximo de archivo (MB)*; "share-link lifetime" → *vigencia de los enlaces compartidos* |
+| switch off / switched off (a custom role) | desactivar / desactivado | as enable / disable; badge "Off" → *Desactivado* |
+| Folder access (the page that was "Permissions": per-file and per-folder grants, v0.49.0) | acceso a carpetas | page, side nav and audit resource → *Acceso a carpetas*; a folder grant in the new strings → *acceso a carpetas* (*Ver y revocar todos los accesos a carpetas*). The older `grants.*` strings keep *permiso* |
+| install request / plugin request (v0.49.0) | solicitud de instalación / solicitud de complemento | page "Install requests" → *Solicitudes de instalación*; statuses agree with *la solicitud*: *En espera / Aprobada / Rechazada / Caducada / Origen cambiado*; "Requested by" → *Solicitante* |
+| a refused action (`server.perm.action.*`, slotted as `{action}`) | lowercase infinitive phrase | *crear claves de API*, *eliminar archivos definitivamente*; the six sentences put it after *para*, *puede*, *le permite* and inside *el permiso “…”* |
+
+**v0.49.0 (roles and permissions) — notes:**
+
+- `nav.roles` and `permissions.title` are *Roles*, spelled as in English: `scripts/style-check.mjs` reports them as IDENTICAL errors. Add "Roles" to its KEEP_WORDS (ordinary words spelled the same), or the two keys to IDENTICAL_OK.
+- The audit verbs approve / reject / expire / supersede are feminine (*aprobada*, *rechazada*, *caducada*, *cerrada porque cambió su origen*): their only resource is *Solicitud de complemento*, so the row reads "Solicitud de complemento: aprobada", as the request's own status badges do.
+- "change files" → *modificar archivos* everywhere (label, refusal, and the "add, change, delete or share" notes), so the read-only notes name the same permission as the grid.
+- Refusals (all 168 read): *Su cuenta no tiene permiso para {action}.* · *Un administrador ha desactivado el permiso “{action}” para su cuenta.* · *Solo un administrador puede {action}.* · *El rol “{rule}” está desactivado, así que no puede {action}.* · *El rol “{rule}” no le permite {action}.* · *Una cuenta de solo lectura no puede {action}.*
 
 ## Plurals — Spanish's CLDR categories
 

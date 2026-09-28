@@ -191,7 +191,7 @@ const KEEP_WORDS = new Set(
     'Backblaze B2 ms v x y z patch Min Max Enterprise Pro Home ' +
     // ordinary words spelled the same in Spanish
     'Antivirus antivirus Error error No no Megabytes megabytes bytes Normal Local Total General Editor ' +
-    'Video Videos Audio Active Directory Personal ' +
+    'Video Videos Audio Active Directory Personal Roles ' +
     // sample values and input masks
     'fileman foo bar XXXX'
   ).split(/\s+/),
