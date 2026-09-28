@@ -212,6 +212,8 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | Folder access (the page that was "Permissions": per-file and per-folder grants, v0.49.0) | acceso a carpetas | page, side nav and audit resource → *Acceso a carpetas*; a folder grant in the new strings → *acceso a carpetas* (*Ver y revocar todos los accesos a carpetas*). The older `grants.*` strings keep *permiso* |
 | install request / plugin request (v0.49.0) | solicitud de instalación / solicitud de complemento | page "Install requests" → *Solicitudes de instalación*; statuses agree with *la solicitud*: *En espera / Aprobada / Rechazada / Caducada / Origen cambiado*; "Requested by" → *Solicitante* |
 | a refused action (`server.perm.action.*`, slotted as `{action}`) | lowercase infinitive phrase | *crear claves de API*, *eliminar archivos definitivamente*; the six sentences put it after *para*, *puede*, *le permite* and inside *el permiso “…”* |
+| an app permission's Default (v0.49.0, role and person editors) | Predeterminado | the choice beside *Permitir* / *Denegar*; with what it comes to: *Predeterminado (permitido)* / *Predeterminado (denegado)*; the source after " · " → *valor predeterminado de la aplicación*; the app's own default: *Valor predeterminado de la aplicación: todos / quienes pueden modificar archivos / solo administradores* |
+| a role's name in other languages (v0.49.0) | nombre y descripción en otros idiomas | *Nombre del rol ({language})*, *Descripción ({language})*; "{count} languages" → *{count} idiomas* |
 
 **v0.49.0 (roles and permissions) — notes:**
 
