@@ -3,7 +3,7 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.48.0) — 4242 strings (257 of them the server's: emails, public pages, notifications)
+  catalogue : catalogue (filex 0.48.1) — 4242 strings (257 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
@@ -26,7 +26,7 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.48.0) — 4242 strings
+  catalogue    : catalogue (filex 0.48.1) — 4242 strings
                  admin 2083 (vue-i18n) · explorer 2142 (plain {name}) · 240 in both · server 257 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
   pack         : translations\es.json  (4246 strings)
