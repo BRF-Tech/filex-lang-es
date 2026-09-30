@@ -99,7 +99,7 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | field | campo | |
 | permission | permiso | |
 | grant (noun) / grant (verb) | permiso / conceder | "Grant revoked" → *Permiso revocado* |
-| access | acceso | "People with access" → *Personas con acceso* |
+| access | acceso | "Who has access" (was "People with access" until v0.50.0, now that groups are listed too) → *Quién tiene acceso* |
 | revoke | revocar | |
 | owner | propietario | |
 | administrator / admin | administrador / admin | "Admin panel" → *Panel de administración*; "Admins only" → *Solo administradores* |
@@ -214,6 +214,21 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | a refused action (`server.perm.action.*`, slotted as `{action}`) | lowercase infinitive phrase | *crear claves de API*, *eliminar archivos definitivamente*; the six sentences put it after *para*, *puede*, *le permite* and inside *el permiso “…”* |
 | an app permission's Default (v0.49.0, role and person editors) | Predeterminado | the choice beside *Permitir* / *Denegar*; with what it comes to: *Predeterminado (permitido)* / *Predeterminado (denegado)*; the source after " · " → *valor predeterminado de la aplicación*; the app's own default: *Valor predeterminado de la aplicación: todos / quienes pueden modificar archivos / solo administradores* |
 | a role's name in other languages (v0.49.0) | nombre y descripción en otros idiomas | *Nombre del rol ({language})*, *Descripción ({language})*; "{count} languages" → *{count} idiomas* |
+| group (a named set of people, v0.50.0 pre-release) | grupo (pl. *grupos*) | "New group" → *Nuevo grupo*; members → *miembros*; "through the group “X”" → *a través del grupo “X”*; "SSO groups" → *Grupos SSO*; "How they joined" → *Cómo se unió*: *Agregado* / *SSO*; "Group folder access" → *Acceso a carpetas del grupo*; "Role priority" → *Prioridad del rol*; "User or group" → *Usuario o grupo* |
+| identity provider / sign-in provider (v0.50.0 pre-release) | proveedor de identidad / proveedor de inicio de sesión | the second as the audit resource *Proveedor de inicio de sesión* |
+| sign-in security (admin page, v0.50.0 pre-release) | seguridad del inicio de sesión | page title and audit resource; the side nav says *Seguridad de acceso* (see the notes below) |
+| wrong attempt / failed attempt (v0.50.0 pre-release) | intento fallido (pl. *intentos fallidos*) | "Wrong attempts per account" → *Intentos fallidos por cuenta*; "Wrong credentials." → *Credenciales incorrectas.*; "Attempts left before a lock: {n}" → *Intentos restantes antes del bloqueo: {n}* |
+| lock (a sign-in lock on an account or an address, v0.50.0 pre-release) / locked | bloqueo / bloqueado | as a file lock; "Locks" → *Bloqueos*; "First lock" / "Longest lock" → *Primer bloqueo* / *Bloqueo más largo*; "Lock step" → *Nivel de bloqueo*; "Locked for {time}" → *Bloqueado durante {time}*; "Only locks in force" → *Solo bloqueos vigentes* |
+| lift the lock / lock lifted (v0.50.0 pre-release) | levantar el bloqueo / bloqueo levantado | never *desbloquear* here (see the notes below); "Lift all locks" → *Levantar todos los bloqueos*; "Lifted by an administrator" → *Levantado por un administrador*; "The lock ran out" → *El bloqueo caducó* |
+| counting window / counting (v0.50.0 pre-release) | ventana de recuento / en recuento | status "Counting" → *En recuento* |
+| allowed addresses / allow-list / exempt (v0.50.0 pre-release) | direcciones permitidas / exento | "No address is exempt." → *Ninguna dirección está exenta.*; the event "Allow-list pass" → *Exento por dirección permitida* |
+| trusted proxy (v0.50.0 pre-release) | proxy de confianza (pl. *proxies de confianza*) | as `authProviders.fields.trusted_proxies`; "edge server" → *servidor perimetral*; "link-local" → *de vínculo local* (Windows' own term; *enlace* is a share link); "loopback" stays; "this machine" → *este equipo* |
+| door (where a sign-in comes in: web form, WebDAV, FTP, SFTP, S3, v0.50.0 pre-release) | vía de acceso | column "Door" → *Vía de acceso*; "Web form" → *Formulario web*; "Other" → *Otra* (agrees with *la vía*, while a reason's "Other" is *Otro*) |
+| test account (v0.50.0 pre-release) | cuenta de prueba | "the test passes" → *la prueba se supera*; "give an account" → *indique una cuenta* |
+| super administrator (v0.50.0 pre-release) | superadministrador | one word (prefix *super-*); "becomes a super administrator" → *pasa a ser una cuenta de superadministrador*, which keeps the agreement with *la cuenta* |
+| first sign-in / the first sign-in rule (v0.50.0 pre-release) | primer inicio de sesión / la regla del primer inicio de sesión | "Open an account at the first sign-in" → *Crear una cuenta en el primer inicio de sesión*; "gets an account" → *obtiene una cuenta* |
+| Linux account / Windows account / operating-system account (v0.50.0 pre-release) | cuenta de Linux / cuenta de Windows / cuenta del sistema operativo | "this machine" → *este equipo*, as "computer"; the Windows policy by its Spanish name, *Tener acceso a este equipo desde la red*; the built-in account names (Administrator, Guest, NT AUTHORITY) stay as the English writes them |
+| realm (the login form's field, v0.50.0 pre-release) | realm | kept, as *claim*: *Realm* as the label, *el realm {realm}* in a sentence (see the notes below) |
 
 **v0.49.0 (roles and permissions) — notes:**
 
@@ -221,6 +236,16 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 - The audit verbs approve / reject / expire / supersede are feminine (*aprobada*, *rechazada*, *caducada*, *cerrada porque cambió su origen*): their only resource is *Solicitud de complemento*, so the row reads "Solicitud de complemento: aprobada", as the request's own status badges do.
 - "change files" → *modificar archivos* everywhere (label, refusal, and the "add, change, delete or share" notes), so the read-only notes name the same permission as the grid.
 - Refusals (all 168 read): *Su cuenta no tiene permiso para {action}.* · *Un administrador ha desactivado el permiso “{action}” para su cuenta.* · *Solo un administrador puede {action}.* · *El rol “{rule}” está desactivado, así que no puede {action}.* · *El rol “{rule}” no le permite {action}.* · *Una cuenta de solo lectura no puede {action}.*
+
+**v0.50.0 (pre-release: sign-in security, operating-system accounts, realms, groups) - notes:**
+
+- **realm → *realm*.** The English uses it as the name of a concept (a sign-in space of its own, the tenant a sign-in goes to), and every Spanish candidate is taken in the same release: *dominio* is the Windows domain and the e-mail domain (`authProviders.fields.domain`, `email_domain`), *ámbito* is the OIDC scope, *espacio* and *organización* say something else. So it stays, like *claim*: *Realm* as the field label, lowercase in a sentence (*Esta dirección pertenece al realm {realm}.*). `scripts/style-check.mjs` lists "Realm" in KEEP_WORDS for this.
+- **door → *vía de acceso*.** *Puerta* is literal and reads oddly in a column; *entrada* is already "entry" (an allow-list entry). *Vía de acceso* names the web form, WebDAV, FTP and SFTP naturally, in the subtitle (*en todas las vías de acceso*) and as the column header.
+- **lift the lock → *levantar el bloqueo*, never *desbloquear*.** The English chose "lift" (not "unlock") so a sign-in lock does not read like an encrypted folder being unlocked or a file lock being released (`audit.verb.unlock` → *desbloqueado*). *Levantar el bloqueo* keeps that distance and is how Spanish says it for an account. The audit verb is *bloqueo levantado*.
+- **Sign-in security in the side nav → *Seguridad de acceso*.** *Seguridad del inicio de sesión* (30 characters) would be cut with an ellipsis in the 240 px side nav, like *Ejecuciones de sincronización*; the short form pairs with *Proveedores de acceso* just above it. The page title and the audit resource keep the full term.
+- **"Wrong credentials." → *Credenciales incorrectas.*** (server): the sign-in form, a WebDAV client and an FTP client all show it, so it names no field; the admin panel's own sentence keeps the fields, as `login.errInvalid` does.
+- **"locked at failed attempt {limit}" → *se bloquea al llegar a {limit} intentos fallidos*.** The same moment without an ordinal (*{limit}.º*), which Spanish cannot put after a placeholder cleanly.
+- **Groups speak of a person without a gender**: *¿Quitar a esta persona ahora?*, *quite a esta persona del grupo*, *si el proveedor de identidad todavía la incluye* (*la persona*), never *quitarlo*.
 
 ## Plurals — Spanish's CLDR categories
 

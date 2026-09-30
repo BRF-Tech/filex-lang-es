@@ -188,6 +188,8 @@ const KEEP_WORDS = new Set(
     'cron webhook Webhook Webhooks token Token endpoint Endpoint bucket Bucket host Host proxy Proxy ' +
     'StartTLS CIDR DN known_hosts clamdscan clamscan B KB MB GB TB PB MiB px OnlyOffice ONLYOFFICE drawio ' +
     'Admin Hex hex base64 Figma Office Word Excel PowerPoint OpenDocument X-Filex-Token Bearer Authorization ' +
+    // a filex concept kept in English, as "claim" (glossary.md, v0.50.0): the login form's Realm field
+    'Realm ' +
     'Backblaze B2 ms v x y z patch Min Max Enterprise Pro Home ' +
     // ordinary words spelled the same in Spanish
     'Antivirus antivirus Error error No no Megabytes megabytes bytes Normal Local Total General Editor ' +
