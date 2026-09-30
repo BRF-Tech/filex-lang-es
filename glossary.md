@@ -274,6 +274,9 @@ language (`Intl.PluralRules` in the browser, `x/text` on the server). Spanish ha
   *Símbolo del sistema*, *Ir → Conectarse al servidor…*, *Ubicaciones*, *Configuración del Sistema*).
 - **Gender agreement** follows the thing described, so the same English word can have two forms:
   *Activado* (webhook, plugin) vs *Activada* (rule, app, 2FA); *Instalado* (plugin) vs *Instalada* (app).
-- **Dash style.** English " — " is kept in some explanatory sentences and turned into ":" in others; both
-  read naturally in Spanish UI text. A native reviewer may want to unify it.
+- **Dash style.** A plain hyphen, never an em dash or an en dash (filex's rule since 2026-09-30):
+  " - " between two clauses, "a-z" and "0-9" for a range, and an aside that Spanish would set between
+  rayas is written with plain hyphens too, its spaces as they were. The validator refuses a long dash.
+  Where the English has " - ", the Spanish keeps it in some explanatory sentences and uses ":" in
+  others; both read naturally in Spanish UI text. A native reviewer may want to unify it.
 - **"Done"**: *Listo* on a button that closes a step, *Completado* as a status.
