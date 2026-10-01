@@ -3,20 +3,21 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.49.0) — 4501 strings (295 of them the server's: emails, public pages, notifications)
+  catalogue : G:\filex-lang-es\catalogue (filex 0.49.0) — 5247 strings (344 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 4501 of 4501 strings; the other 0 show in English
-  131 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 5247 of 5247 strings; the other 0 show in English
+  147 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
-  11 plural key(s) lack a form for one of those categories and show the plain form for it
+  12 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
   plural      archive.dictionary_size_value: lacks archive.dictionary_size_value_one
   plural      drafts.count_of: lacks drafts.count_of_one
   plural      inspector.activity.version: lacks inspector.activity.version_one
   plural      inspector.versions.v: lacks inspector.versions.v_one
   plural      opc.percent: lacks opc.percent_one
+  plural      peek.more: lacks peek.more_one
   plural      server.app.wake.beyond: lacks server.app.wake.beyond_one
   plural      sidenav.tags.more: lacks sidenav.tags.more_one
   plural      tour.progress: lacks tour.progress_one
@@ -26,15 +27,15 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.49.0) — 4501 strings
-                 admin 2304 (vue-i18n) · explorer 2142 (plain {name}) · 240 in both · server 295 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.49.0) — 5247 strings
+                 admin 2950 (vue-i18n) · explorer 2192 (plain {name}) · 239 in both · server 344 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (4505 strings)
+  pack         : translations\es.json  (5251 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 52 short English labels translated more than one way (see below)
+Consistency: 60 short English labels translated more than one way (see below)
 
 Same English, different Spanish (review — context may justify it):
   "All"
@@ -42,7 +43,7 @@ Same English, different Spanish (review — context may justify it):
       "Todo"  <- search.scopeAll
   "Delete"
       "Eliminación"  <- apiMcp.scopeName.delete, queue.type.delete, opc.kind.delete
-      "Eliminar"  <- common.delete, permissions.items.files.delete.label, versions.purge, ctx.delete (+1)
+      "Eliminar"  <- authProviders.delete, common.delete, permissions.items.files.delete.label, versions.purge (+2)
   "Upgrade"
       "Actualizar"  <- appPlugins.actions.upgrade, appPlugins.wizard.upgrade, plugins.upgrade.action
       "Actualización"  <- pluginRequests.op.upgrade
@@ -58,7 +59,10 @@ Same English, different Spanish (review — context may justify it):
   "Failed"
       "Fallida"  <- appPlugins.detail.schedule.statuses.failed, appPlugins.state.failed
       "Fallido"  <- appearance.previewDanger, notifications.webhookStatus.failed, plugins.state.failed, queue.status.failed (+1)
-      "Fallidos"  <- queue.stats.failed, replica.report.fields.failedCount
+      "Fallidos"  <- queue.stats.failed, replica.report.fields.failedCount, tools.thumbs.count.failed
+  "Skipped"
+      "Omitida"  <- appPlugins.detail.schedule.statuses.skipped
+      "Omitidos"  <- tools.thumbs.count.skipped
   "Updated"
       "Actualizada"  <- appPlugins.detail.updated
       "Actualizado"  <- common.updated
@@ -70,7 +74,7 @@ Same English, different Spanish (review — context may justify it):
       "{name} instalada"  <- appPlugins.installed
       "{name} instalado"  <- plugins.installed
   "Off"
-      "Desactivada"  <- appPlugins.state.disabled
+      "Desactivada"  <- appPlugins.state.disabled, appPlugins.wizard.fileTypes.place.off, defaultApps.editor.off
       "Desactivado"  <- authProviders.status.disabled, permissions.rules.disabled, plugins.state.disabled
   "Refused"
       "Rechazada"  <- appPlugins.state.refused
@@ -83,7 +87,11 @@ Same English, different Spanish (review — context may justify it):
       "{name} actualizado"  <- plugins.upgrade.done
   "Added"
       "Agregados"  <- appPlugins.wizard.diff.filesAdded, dashboard.added, sync.fields.added
+      "Agregado"  <- groups.source.manual
       "Agregada"  <- conn.sshkeys.col.added
+  "Changed"
+      "Cambiados"  <- appPlugins.wizard.diff.filesChanged
+      "Cambiado"  <- defaultApps.status.custom
   "Install"
       "Instalar"  <- appPlugins.wizard.install, install.install, plugins.install
       "Instalación"  <- appPlugins.wizard.steps.done, pluginRequests.op.install
@@ -99,6 +107,12 @@ Same English, different Spanish (review — context may justify it):
   "Archives"
       "Archivos comprimidos"  <- archivesAdmin.title, nav.archives
       "Comprimidos"  <- filter.type.archive
+  "Sign-in security"
+      "Seguridad del inicio de sesión"  <- audit.resource.login_security, audit.target.login_security, loginSecurity.title
+      "Seguridad de acceso"  <- nav.loginSecurity
+  "Comment"
+      "Comentario"  <- audit.target.comment
+      "Comentar"  <- permissions.items.comments.write.label
   "Auth providers"
       "Proveedores de autenticación"  <- authProviders.title
       "Proveedores de acceso"  <- nav.authProviders
@@ -111,6 +125,9 @@ Same English, different Spanish (review — context may justify it):
   "New password"
       "Nueva contraseña"  <- common.newPassword, users.resetPasswordTitle
       "Contraseña nueva"  <- e2e.password.new
+  "None"
+      "Ninguno"  <- common.none, permissions.none, usage.fields.providerNone
+      "Ninguna"  <- defaultApps.none
   "OK"
       "Aceptar"  <- common.ok
       "Correcto"  <- sync.state.ok
@@ -122,10 +139,13 @@ Same English, different Spanish (review — context may justify it):
       "Eliminado"  <- trash.col_deleted_at, col.deleted, toast.deleted
   "Storages"
       "Almacen."  <- dashboard.stats.storages
-      "Almacenamientos"  <- nav.storages, permissions.rules.storages, plugins.fields.inUse, storages.title (+2)
+      "Almacenamientos"  <- nav.storages, permissions.rules.storages, plugins.fields.inUse, storages.title (+3)
   "Type"
       "Tipo"  <- explore.cols.mime, queue.fields.type, settings.folderView.col_type, settings.folderView.sort_type (+4)
       "Escribir"  <- plugin.sig.mode_type
+  "Other"
+      "Otra"  <- loginSecurity.attempts.door.other, loginSecurity.attempts.via.other
+      "Otro"  <- loginSecurity.attempts.reason.other
   "Expired"
       "Caducado"  <- myShares.expired, server.public.err_drop_expired_title
       "Caducada"  <- pluginRequests.status.expired
@@ -160,6 +180,12 @@ Same English, different Spanish (review — context may justify it):
   "Share"
       "Recurso compartido"  <- storages.fields.share
       "Compartir"  <- access.ui.share, ctx.share, modal.share.create, shortcuts.share (+1)
+  "Link"
+      "Vincular"  <- tenants.link
+      "Enlace"  <- symlink.badge.unknown
+  "Drawn"
+      "Generados"  <- tools.thumbs.count.ok
+      "Dibujada"  <- plugin.pdf.style_drawn
   "Empty trash"
       "Vaciar la papelera"  <- trash.empty, trash.empty_modal_title, trash.empty_action
       "Vaciado de la papelera"  <- opc.kind.trash

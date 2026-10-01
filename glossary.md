@@ -229,6 +229,11 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | first sign-in / the first sign-in rule (v0.50.0 pre-release) | primer inicio de sesión / la regla del primer inicio de sesión | "Open an account at the first sign-in" → *Crear una cuenta en el primer inicio de sesión*; "gets an account" → *obtiene una cuenta* |
 | Linux account / Windows account / operating-system account (v0.50.0 pre-release) | cuenta de Linux / cuenta de Windows / cuenta del sistema operativo | "this machine" → *este equipo*, as "computer"; the Windows policy by its Spanish name, *Tener acceso a este equipo desde la red*; the built-in account names (Administrator, Guest, NT AUTHORITY) stay as the English writes them |
 | realm (the login form's field, v0.50.0 pre-release) | realm | kept, as *claim*: *Realm* as the label, *el realm {realm}* in a sentence (see the notes below) |
+| thumbnail / draw a thumbnail (v0.50.0) | miniatura / generar una miniatura | "Thumbnail repair" → *Reparación de miniaturas*; "drew it" → *la generó*; *dibujar* only for the PDF signature's drawn style |
+| handler (what draws a kind's thumbnail: filex or an app, v0.50.0) | gestor (pl. *gestores*) | "Handlers asked" → *Gestores consultados*; "drawn by a fallback" → *generada por un gestor de reserva* |
+| default apps (which app opens a kind of file, v0.50.0) | aplicaciones predeterminadas | page, tab, settings section and audit resource; "Opens with" → *Se abre con*; "kind" (of file) → *tipo* |
+| tools (admin page, v0.50.0) | herramientas | *Herramientas → Reparación de miniaturas* |
+| own domain (a tenant's, v0.50.0) | dominio propio | "Own address" → *Dirección propia*; "Bring a certificate" → *Cargar un certificado*; "its people" (a tenant's) → *sus usuarios* |
 
 **v0.49.0 (roles and permissions) — notes:**
 

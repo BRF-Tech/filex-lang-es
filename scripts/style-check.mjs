@@ -191,6 +191,8 @@ const KEEP_WORDS = new Set(
     // a filex concept kept in English, as "claim" (glossary.md, v0.50.0): the login form's Realm field
     'Realm ' +
     'Backblaze B2 ms v x y z patch Min Max Enterprise Pro Home ' +
+    // container runtimes, named as they name themselves (loginSecurity.proxies.auto.runtime.*, v0.50.0)
+    'Docker Podman Kubernetes containerd ' +
     // ordinary words spelled the same in Spanish
     'Antivirus antivirus Error error No no Megabytes megabytes bytes Normal Local Total General Editor ' +
     'Video Videos Audio Active Directory Personal Roles ' +
@@ -212,6 +214,7 @@ const IDENTICAL_OK = new Set([
   'install.dl.linux_snap', // product name: Snap Store
   'install.dl.mac_brew', // product name: Homebrew
   'install.dl.rpm', // distribution names + file type: Fedora / openSUSE (.rpm)
+  'pluginLog.repeated', // a count after the multiplication sign: ×{count}
 ]);
 function identicalAllowed(key, en) {
   if (IDENTICAL_OK.has(key)) return true;
