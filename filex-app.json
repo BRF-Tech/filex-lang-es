@@ -385,7 +385,7 @@
       "appPlugins.state.failed": "Fallida",
       "appPlugins.state.refused": "Rechazada",
       "appPlugins.state.running": "En ejecución",
-      "appPlugins.subtitle": "Aplicaciones WebAssembly que agregan filas al menú de archivos y se ejecutan como tareas: firma, conversión, cualquier cosa que describa un manifiesto. Una aplicación se ejecuta dentro de filex solo con los permisos que solicitó y que usted concedió.",
+      "appPlugins.subtitle": "Las aplicaciones agregan cosas que hacer con los archivos: comandos del menú de archivos que se ejecutan como tareas (firma, conversión), editores que abren un tipo de archivo en una interfaz propia (diagramas, texto) o un idioma. Cada una se ejecuta dentro de filex solo con los permisos que solicitó y que usted concedió.",
       "appPlugins.supertenantOnly": "Las aplicaciones las administra el operador de la plataforma.",
       "appPlugins.tabs.apps": "Aplicaciones",
       "appPlugins.tabs.storage": "Complementos de almacenamiento",
