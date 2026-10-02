@@ -234,6 +234,8 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | default apps (which app opens a kind of file, v0.50.0) | aplicaciones predeterminadas | page, tab, settings section and audit resource; "Opens with" → *Se abre con*; "kind" (of file) → *tipo* |
 | tools (admin page, v0.50.0) | herramientas | *Herramientas → Reparación de miniaturas* |
 | own domain (a tenant's, v0.50.0) | dominio propio | "Own address" → *Dirección propia*; "Bring a certificate" → *Cargar un certificado*; "its people" (a tenant's) → *sus usuarios* |
+| SSO identity / bound to it / SSO bind (v0.50.0) | identidad SSO / vinculada a ella / vínculo SSO | "Remove SSO bind" → *Quitar el vínculo SSO*; an account whose first SSO sign-in fixed its identity refuses another identity with the same address |
+| waiting for approval / approve and switch on (an account opened switched off by SSO, v0.50.0) | pendiente de aprobación / aprobar y activar | the security hints (*trust_email*, *show_refusal_reason*) keep every condition of the English: what stays off, who can then sign in to what |
 
 **v0.49.0 (roles and permissions) — notes:**
 
