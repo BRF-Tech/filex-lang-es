@@ -14,7 +14,7 @@ the admin panel, the settings dialog and the public pages a share link opens —
 > (or change the glossary first).
 
 - **Version** 0.1.7, for filex 0.50.0 · **catalogue** filex 0.50.0 (pre-release) · **coverage** 100%
-  (5,247 of 5,247 strings, 344 of them the text the server writes) · 4 extra plural forms
+  (5,250 of 5,250 strings, 344 of them the text the server writes) · 4 extra plural forms
 - Neutral, international Spanish, addressing the reader as *usted*.
 
 ## Install
