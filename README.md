@@ -13,7 +13,7 @@ the admin panel, the settings dialog and the public pages a share link opens —
 > against `translations/es.json`, and keep to the terminology in [`glossary.md`](glossary.md)
 > (or change the glossary first).
 
-- **Version** 0.1.7, for filex 0.50.0 · **catalogue** filex 0.50.0 (pre-release) · **coverage** 100%
+- **Version** 0.1.7, for filex 0.50.0 · **catalogue** filex 0.50.0 · **coverage** 100%
   (5,313 of 5,313 strings, 344 of them the text the server writes) · 4 extra plural forms
 - Neutral, international Spanish, addressing the reader as *usted*.
 
