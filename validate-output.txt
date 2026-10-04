@@ -3,12 +3,12 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : G:\filex-lang-es\catalogue (filex 0.49.0) — 5313 strings (344 of them the server's: emails, public pages, notifications)
+  catalogue : G:\filex-lang-es\catalogue (filex 0.50.0) — 5502 strings (366 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 5313 of 5313 strings; the other 0 show in English
-  149 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 5502 of 5502 strings; the other 0 show in English
+  150 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   12 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
@@ -27,10 +27,10 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.49.0) — 5313 strings
-                 admin 3006 (vue-i18n) · explorer 2202 (plain {name}) · 239 in both · server 344 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.50.0) — 5502 strings
+                 admin 3143 (vue-i18n) · explorer 2236 (plain {name}) · 243 in both · server 366 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (5317 strings)
+  pack         : translations\es.json  (5506 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
@@ -75,7 +75,7 @@ Same English, different Spanish (review — context may justify it):
       "{name} instalado"  <- plugins.installed
   "Off"
       "Desactivada"  <- appPlugins.state.disabled, appPlugins.wizard.fileTypes.place.off, defaultApps.editor.off
-      "Desactivado"  <- authProviders.status.disabled, permissions.rules.disabled, plugins.state.disabled
+      "Desactivado"  <- authProviders.status.disabled, encryption.tenants.state.off, permissions.rules.disabled, plugins.state.disabled
   "Refused"
       "Rechazada"  <- appPlugins.state.refused
       "Rechazado"  <- plugins.state.refused
@@ -113,9 +113,6 @@ Same English, different Spanish (review — context may justify it):
   "Comment"
       "Comentario"  <- audit.target.comment
       "Comentar"  <- permissions.items.comments.write.label
-  "Auth providers"
-      "Proveedores de autenticación"  <- authProviders.title
-      "Proveedores de acceso"  <- nav.authProviders
   "Copy"
       "Copiar"  <- common.copy, desktop.copy, access.copy, conn.guide.copy (+7)
       "Copia"  <- queue.type.copy, opc.kind.copy
@@ -131,24 +128,27 @@ Same English, different Spanish (review — context may justify it):
   "OK"
       "Aceptar"  <- common.ok
       "Correcto"  <- sync.state.ok
-  "Search"
-      "Buscar"  <- common.search, advsearch.submit, toolbar.search, tour.step.search.title (+1)
-      "Búsqueda"  <- nav.search
   "Deleted"
       "Eliminados"  <- dashboard.deleted, sync.fields.deleted
       "Eliminado"  <- trash.col_deleted_at, col.deleted, toast.deleted
   "Storages"
       "Almacen."  <- dashboard.stats.storages
       "Almacenamientos"  <- nav.storages, permissions.rules.storages, plugins.fields.inUse, storages.title (+3)
+  "On"
+      "Activada"  <- defaultApps.editor.on
+      "Activado"  <- encryption.tenants.state.on
+  "Expired"
+      "Caducada"  <- encryption.requests.status.expired, pluginRequests.status.expired
+      "Caducado"  <- myShares.expired, server.public.err_drop_expired_title
+  "Used"
+      "Usada"  <- encryption.requests.status.used
+      "Usado"  <- quota.used
   "Type"
       "Tipo"  <- explore.cols.mime, queue.fields.type, settings.folderView.col_type, settings.folderView.sort_type (+4)
       "Escribir"  <- plugin.sig.mode_type
   "Other"
       "Otra"  <- loginSecurity.attempts.door.other, loginSecurity.attempts.via.other
       "Otro"  <- loginSecurity.attempts.reason.other
-  "Expired"
-      "Caducado"  <- myShares.expired, server.public.err_drop_expired_title
-      "Caducada"  <- pluginRequests.status.expired
   "Sync runs"
       "Sincronizaciones"  <- nav.sync
       "Ejecuciones de sincronización"  <- sync.title

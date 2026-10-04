@@ -236,6 +236,17 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 | own domain (a tenant's, v0.50.0) | dominio propio | "Own address" → *Dirección propia*; "Bring a certificate" → *Cargar un certificado*; "its people" (a tenant's) → *sus usuarios* |
 | SSO identity / bound to it / SSO bind (v0.50.0) | identidad SSO / vinculada a ella / vínculo SSO | "Remove SSO bind" → *Quitar el vínculo SSO*; an account whose first SSO sign-in fixed its identity refuses another identity with the same address |
 | waiting for approval / approve and switch on (an account opened switched off by SSO, v0.50.0) | pendiente de aprobación / aprobar y activar | the security hints (*trust_email*, *show_refusal_reason*) keep every condition of the English: what stays off, who can then sign in to what |
+| encryption policy (who may encrypt, v0.51.0) | política de cifrado | admin page and menu "Encryption" → *Cifrado*; "Who may encrypt" → *Quién puede cifrar*; the four options *Desactivado - nadie, ni siquiera los administradores* / *Solo administradores* / *Todas las personas cuyo rol lo permita* / *Todas las personas cuyo rol lo permita, previa aprobación de un administrador*; the role permission "Encrypt" → *Cifrar* (`server.perm.action` → *cifrar archivos*) |
+| encryption request (v0.51.0) | solicitud de cifrado (pl. *solicitudes de cifrado*) | as an install request: "Request encryption…" → *Solicitar cifrado…*; "Request an encrypted folder…" → *Solicitar una carpeta cifrada…*; "Send request" → *Enviar solicitud*; "Reason" → *Motivo*; "Requested by" → *Solicitante*; the column "Requested" → *Fecha de solicitud* |
+| approval / approve / reject (an encryption request, v0.51.0) | aprobación / aprobar / rechazar | "an administrator’s approval" → *la aprobación de un administrador*; buttons *Aprobar* / *Rechazar…*; statuses agree with *la solicitud*: *En espera / Aprobada / Rechazada / Caducada / Usada*; "approved by {who}" → *aprobada por {who}*; "answered" → *respondida*; "lapse" → *caducar*; the audit verb "used" → *usada* (its resource is *Solicitud de cifrado*) |
+| new encrypted folder / new encrypted file / encrypted where it is (v0.51.0) | carpeta cifrada nueva / archivo cifrado nuevo / cifrada donde está | the three kinds of approval: *Esta carpeta, cifrada donde está* / *Una carpeta cifrada nueva en esta carpeta* / *Un archivo cifrado nuevo en esta carpeta*; "directly inside" → *directamente dentro de* |
+| tenant encryption (the platform operator's switch, v0.51.0) | cifrado del inquilino | "Encryption available" → *Cifrado disponible*; states *Activado* / *Desactivado* (agree with *el cifrado*); the operator's own row "Platform operator" → *Operador de la plataforma* |
+| Identity providers (v0.51.0, was "Auth providers") | proveedores de identidad | page title and menu alike, the term of the identity provider row above; "No identity providers enabled" → *No hay proveedores de identidad activados* (see the v0.51.0 notes) |
+| Search index (menu item, v0.51.0, was "Search") | índice de búsqueda | the same words as the page title and the audit resource |
+| admin mega menu (v0.51.0) | menú de administración | top entries *Archivos y almacenamiento* / *Personas y seguridad* / *Sistema*; columns *Archivos*, *Almacenamiento*, *Complementos e integraciones*, *Personas y acceso*, *Seguridad*, *Personalización*, *Mantenimiento y registros*; "Menu" → *Menú* |
+| menu hint (the short line under each menu item, v0.51.0) | - | at most two lines in the menu's 232 px column: a noun phrase (*Cuentas y sus roles*) or an usted imperative (*Busque un archivo y abra sus versiones*), never an infinitive |
+| Save as (an app saves a file to a place the reader picks, v0.51.0) | guardar en | picker title "Save to" → *Guardar en*, as the drafts column; "Save here" → *Guardar aquí*; "{app}: save “{name}” to" → *{app}: guardar “{name}” en* |
+| saved beside (ONLYOFFICE's save in another format, v0.51.0) | guardado junto al original | an edit → *edición*: "Your edit was saved as {saved}" → *Su edición se guardó como {saved}*; audit *guardado junto al original, en otro formato (ONLYOFFICE)* / *guardado no escrito (ONLYOFFICE)*; "spreadsheet editor" → *editor de hojas de cálculo*; ONLYOFFICE's own File menu → *Archivo* |
 
 **v0.49.0 (roles and permissions) — notes:**
 
@@ -253,6 +264,13 @@ Auth0, Authentik, Bleve, Vue, React, Go, cron, webhook, token, endpoint, bucket,
 - **"Wrong credentials." → *Credenciales incorrectas.*** (server): the sign-in form, a WebDAV client and an FTP client all show it, so it names no field; the admin panel's own sentence keeps the fields, as `login.errInvalid` does.
 - **"locked at failed attempt {limit}" → *se bloquea al llegar a {limit} intentos fallidos*.** The same moment without an ordinal (*{limit}.º*), which Spanish cannot put after a placeholder cleanly.
 - **Groups speak of a person without a gender**: *¿Quitar a esta persona ahora?*, *quite a esta persona del grupo*, *si el proveedor de identidad todavía la incluye* (*la persona*), never *quitarlo*.
+
+**v0.51.0 (pre-release: encryption policy and requests, admin mega menu, ONLYOFFICE for CSV) - notes:**
+
+- **Identity providers → *Proveedores de identidad*, in the menu too.** Until v0.50.0 the page title said *Proveedores de autenticación* and the 240 px side nav *Proveedores de acceso*. v0.51.0 renamed both in English to "Identity providers" and replaced the side nav with a mega menu whose columns wrap, so the menu now carries the full term. `nav.loginSecurity` keeps *Seguridad de acceso* (its English did not change).
+- **request → *solicitud*, as for the install requests.** The encryption requests reuse the words of `pluginRequests.*` (*En espera*, *Aprobada*, *Rechazada*, *Caducada*, *Motivo*, *Solicitante*), so the two approval pages read alike; *petición* is not used.
+- **The audit verbs of an encryption request are feminine** (*aprobada*, *rechazada*, *caducada*, *usada*), as for the plugin request: the row reads "Solicitud de cifrado: usada". The shared verbs *creado* / *actualizado* stay masculine (one key serves every resource).
+- **Security sentences keep every condition**: "administrators included" → *ni siquiera los administradores* / *tampoco sus administradores*; "everybody else is refused" → *se rechaza a cualquier otra persona*; "can be used once, and not on a folder inside it" → *se puede usar una vez, y no sirve para una carpeta que esté dentro de ella*.
 
 ## Plurals — Spanish's CLDR categories
 
@@ -295,7 +313,7 @@ language (`Intl.PluralRules` in the browser, `x/text` on the server). Spanish ha
   *recurso compartido* — the term Spanish Windows uses.
 - **Sync runs in the side nav → *Sincronizaciones*.** *Ejecuciones de sincronización* is kept for the page
   title, but was cut with an ellipsis in the 240 px admin side nav (measured).
-- **Auth providers in the side nav → *Proveedores de acceso*** (page title keeps *Proveedores de autenticación*).
+- **Auth providers in the side nav → *Proveedores de acceso*** (page title keeps *Proveedores de autenticación*). Until v0.50.0; since v0.51.0 both say *Proveedores de identidad* (see the v0.51.0 notes).
 - **Active syncs tile → *Sinc. activas*.** The only abbreviation in the pack: a single 16-letter word
   (*Sincronizaciones*) clipped in the tile at 1280 px; two short words wrap like "TAREAS EN COLA".
 - **Client software instructions** (FileZilla, WinSCP, Cyberduck) use the menu names of their Spanish
