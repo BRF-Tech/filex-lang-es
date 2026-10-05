@@ -3,11 +3,11 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : G:\filex-lang-es\catalogue (filex 0.51.0) — 5502 strings (366 of them the server's: emails, public pages, notifications)
+  catalogue : G:\filex-lang-es\catalogue (filex 0.51.0) — 5621 strings (370 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 5502 of 5502 strings; the other 0 show in English
+[es] 100% translated — 5621 of 5621 strings; the other 0 show in English
   150 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   12 plural key(s) lack a form for one of those categories and show the plain form for it
@@ -27,15 +27,15 @@ filex language pack validator
 
 # node scripts/style-check.mjs
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.51.0) — 5502 strings
-                 admin 3143 (vue-i18n) · explorer 2236 (plain {name}) · 243 in both · server 366 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.51.0) — 5621 strings
+                 admin 3258 (vue-i18n) · explorer 2236 (plain {name}) · 243 in both · server 370 (mails, public pages, notifications)
   plurals      : one, other — 4 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (5506 strings)
+  pack         : translations\es.json  (5625 strings)
   syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 60 short English labels translated more than one way (see below)
+Consistency: 61 short English labels translated more than one way (see below)
 
 Same English, different Spanish (review — context may justify it):
   "All"
@@ -98,6 +98,9 @@ Same English, different Spanish (review — context may justify it):
   "Review"
       "Revisión"  <- appPlugins.wizard.steps.review
       "Revisar"  <- pluginRequests.actions.review
+  "revoked"
+      "revocada"  <- appStore.license.status.revoked
+      "revocado"  <- audit.verb.revoke
   "Upload"
       "Subir"  <- appearance.previewUpload, plugin.sig.mode_upload, toolbar.upload
       "Subida"  <- audit.target.upload, opc.kind.upload
