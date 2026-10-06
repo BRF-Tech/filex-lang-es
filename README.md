@@ -13,9 +13,16 @@ the admin panel, the settings dialog and the public pages a share link opens —
 > against `translations/es.json`, and keep to the terminology in [`glossary.md`](glossary.md)
 > (or change the glossary first).
 
-- **Version** 0.1.9, for filex 0.52.0 · **catalogue** filex 0.52.0 · **coverage** 100%
-  (5,502 of 5,502 strings, 366 of them the text the server writes) · 4 extra plural forms
-- Neutral, international Spanish, addressing the reader as *usted*.
+<!-- langpack:status -->
+| | |
+|---|---|
+| Version | 0.1.9, for filex 0.52.0 |
+| Catalogue | filex **0.52.0** (`catalogue/`): 5,784 strings - 3,177 admin, 1,993 explorer, 371 the server's, 243 drawn by both |
+| Coverage | 100 % - 5,784 of 5,784 strings, plus 4 extra plural forms |
+| Validators | platform: 0 errors, 0 warnings; the pack's own check passes - the last run is [`validate-output.txt`](validate-output.txt) |
+<!-- /langpack:status -->
+
+Neutral, international Spanish, addressing the reader as *usted*.
 
 ## Install
 
