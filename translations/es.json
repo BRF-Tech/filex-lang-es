@@ -5045,7 +5045,6 @@
   "tenants.generalTitle": "General",
   "tenants.link": "Vincular",
   "tenants.linkStorage": "Vincular un almacenamiento",
-  "tenants.modeOff": "El modo multiinquilino está desactivado (FILEX_MULTI_TENANT): solo puede iniciar sesión el inquilino propio de la plataforma. Los demás inquilinos y todo lo que tienen se conservan, y sus usuarios vuelven a iniciar sesión cuando se reactiva.",
   "tenants.noMatch": "Ningún inquilino coincide.",
   "tenants.noStorages": "No hay ningún almacenamiento vinculado.",
   "tenants.oidcHint": "El proveedor de identidad propio del inquilino, usado en su propia dirección. Vacío: sus usuarios inician sesión con una contraseña o a través de los proveedores de la plataforma.",
