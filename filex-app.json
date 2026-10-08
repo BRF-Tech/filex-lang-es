@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "name": "lang-es",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "label": {
     "en": "Spanish language pack",
     "es": "Paquete de idioma español"
@@ -4488,7 +4488,6 @@
       "server.field.number": "Escriba un número.",
       "server.field.option": "Elija una de las opciones ofrecidas.",
       "server.field.pin": "Escriba el código completo: {count} caracteres.",
-      "server.field.pin_one": "Escriba el código completo: {count} carácter.",
       "server.field.required": "Este campo es obligatorio.",
       "server.field.required_fields": "Complete los campos obligatorios.",
       "server.field.shape": "Esta respuesta no tiene el formato que pedía esta pantalla.",
@@ -4848,7 +4847,6 @@
       "server.share_mail.sent": "Correo enviado a {count} personas.",
       "server.share_mail.sent_one": "Correo enviado a {count} persona.",
       "server.share_mail.too_many": "Envíe como máximo a {count} direcciones a la vez.",
-      "server.share_mail.too_many_one": "Envíe como máximo a {count} dirección a la vez.",
       "server.storage.root_path_forbidden": "Un almacenamiento no puede abarcar todo su backend. Escriba una subcarpeta como ruta o prefijo, por ejemplo fileman o data/files.",
       "server.storage.scan_exclude_everything": "“{pattern}” excluiría todo el contenido de este almacenamiento. Indique en su lugar lo que se debe omitir, por ejemplo .git, *.tmp o downloads/incomplete/**.",
       "server.storage.scan_exclude_limit": "Demasiados patrones, o alguno demasiado largo: escriba como máximo {max} patrones, de {length} caracteres como máximo cada uno.",
@@ -6325,6 +6323,8 @@
       "webhooks.testFail": "La entrega de prueba falló: {error}",
       "webhooks.testOk": "La entrega de prueba a \"{name}\" se realizó correctamente",
       "webhooks.title": "Webhooks",
+      "server.field.pin_one": "Escriba el código completo: {count} carácter.",
+      "server.share_mail.too_many_one": "Envíe como máximo a {count} dirección a la vez.",
       "cols.apply_all_one": "Usar esta como mi vista predeterminada en todas las carpetas ({count} recordada)",
       "selection.count_one": "Seleccionado: {n}",
       "server.app.wake.refused_one": "{count} rechazada ({reason})",
