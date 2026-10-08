@@ -215,6 +215,10 @@ const IDENTICAL_OK = new Set([
   'install.dl.mac_brew', // product name: Homebrew
   'install.dl.rpm', // distribution names + file type: Fedora / openSUSE (.rpm)
   'pluginLog.repeated', // a count after the multiplication sign: ×{count}
+  // the desktop sync engine's durations (v0.54.0): h, min and s are the unit symbols in Spanish too
+  'server.sync.time.hours', // {hours} h {minutes} min
+  'server.sync.time.minutes', // {minutes} min
+  'server.sync.time.seconds', // {seconds} s
 ]);
 function identicalAllowed(key, en) {
   if (IDENTICAL_OK.has(key)) return true;
