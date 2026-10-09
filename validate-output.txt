@@ -1,6 +1,6 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : G:\filex-lang-es\catalogue (filex 0.54.0+a4428dc3) — 6529 strings (1222 of them the server's: emails, public pages, notifications)
+  catalogue : G:\filex-lang-es\catalogue (filex 0.55.0) — 6529 strings (1222 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
@@ -10,7 +10,7 @@ filex language pack validator
   12 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.54.0+a4428dc3) — 6529 strings
+  catalogue    : catalogue (filex 0.55.0) — 6529 strings
                  admin 3279 (vue-i18n) · explorer 2262 (plain {name}) · 234 in both · server 1222 (mails, public pages, notifications)
   plurals      : one, other — 6 extra form key(s) beyond the catalogue
   pack         : translations\es.json  (6535 strings)
