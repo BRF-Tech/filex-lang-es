@@ -1,7 +1,7 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : /var/lib/filex-langpacks/filex-lang-es/catalogue (filex 0.55.0+93505a7e) — 6571 strings (1264 of them the server's: emails, public pages, notifications)
-  syntax    : built-in checker (vue-i18n parser not installed)
+  catalogue : G:\filex-lang-es\catalogue (filex 0.55.0+9512e0ee) — 6571 strings (1264 of them the server's: emails, public pages, notifications)
+  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
 [es] 100% translated — 6571 of 6571 strings; the other 0 show in English
@@ -10,11 +10,11 @@ filex language pack validator
   12 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.55.0+93505a7e) — 6571 strings
+  catalogue    : catalogue (filex 0.55.0+9512e0ee) — 6571 strings
                  admin 3279 (vue-i18n) · explorer 2262 (plain {name}) · 234 in both · server 1264 (mails, public pages, notifications)
   plurals      : one, other — 6 extra form key(s) beyond the catalogue
-  pack         : translations/es.json  (6577 strings)
-  syntax check : built-in checker (vue-i18n parser not installed — `npm install`, or pass --src)
+  pack         : translations\es.json  (6577 strings)
+  syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
