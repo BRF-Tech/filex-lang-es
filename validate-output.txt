@@ -1,21 +1,21 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : G:\filex-lang-es\catalogue (filex 0.56.0) — 6571 strings (1264 of them the server's: emails, public pages, notifications)
-  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+  catalogue : /var/lib/filex-langpacks/filex-lang-es/catalogue (filex 0.56.3+a8488515) — 6988 strings (1417 of them the server's: emails, public pages, notifications)
+  syntax    : built-in checker (vue-i18n parser not installed)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 6571 of 6571 strings; the other 0 show in English
-  173 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 6988 of 6988 strings; the other 0 show in English
+  179 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   12 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.56.0) — 6571 strings
-                 admin 3279 (vue-i18n) · explorer 2262 (plain {name}) · 234 in both · server 1264 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.56.3+a8488515) — 6988 strings
+                 admin 3488 (vue-i18n) · explorer 2315 (plain {name}) · 232 in both · server 1417 (mails, public pages, notifications)
   plurals      : one, other — 6 extra form key(s) beyond the catalogue
-  pack         : translations\es.json  (6577 strings)
-  syntax check : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+  pack         : translations/es.json  (6994 strings)
+  syntax check : built-in checker (vue-i18n parser not installed — `npm install`, or pass --src)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 66 short English labels translated more than one way (see below)
+Consistency: 69 short English labels translated more than one way (see below)
