@@ -5140,6 +5140,7 @@
   "server.onlyoffice.saved_beside_title": "Su edición se guardó como {saved}",
   "server.onlyoffice.saved_conflict_body": "{name} se modificó en otro lugar después de que su sesión de edición lo abriera, así que su edición no se escribió sobre esa versión: está en {saved}, en la misma carpeta. {name} conserva el otro cambio.",
   "server.onlyoffice.saved_conflict_title": "{name} cambió mientras lo editaba",
+  "server.ops.wait.storage_scan": "Esperando su turno: se está escaneando el almacenamiento",
   "server.origin.refused": "Este cambio se envió desde otro sitio, no desde el propio filex, así que se rechazó para proteger su sesión. Si ese sitio inserta filex a propósito, un administrador puede permitirlo con `FILEX_CORS_ALLOWED_ORIGINS`.",
   "server.perm.action.access.api": "crear claves de API",
   "server.perm.action.access.desktop": "iniciar sesión desde la aplicación de escritorio",
