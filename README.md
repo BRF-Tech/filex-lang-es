@@ -16,9 +16,9 @@ the admin panel, the settings dialog and the public pages a share link opens —
 <!-- langpack:status -->
 | | |
 |---|---|
-| Version | 0.1.16, for filex 0.57.5 |
-| Catalogue | filex **0.57.5** (`catalogue/`): 7,004 strings - 3,262 admin, 2,092 explorer, 1,418 the server's, 232 drawn by both |
-| Coverage | 100 % - 7,004 of 7,004 strings, plus 6 extra plural forms |
+| Version | 0.1.17, for filex 0.58.0 |
+| Catalogue | filex **0.58.0** (`catalogue/`): 7,109 strings - 3,323 admin, 2,101 explorer, 1,453 the server's, 232 drawn by both |
+| Coverage | 100 % - 7,109 of 7,109 strings, plus 7 extra plural forms |
 | Validators | platform: 0 errors, 0 warnings; the pack's own check passes - the last run is [`validate-output.txt`](validate-output.txt) |
 <!-- /langpack:status -->
 
