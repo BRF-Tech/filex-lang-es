@@ -489,6 +489,7 @@
   "appPlugins.wizard.fileTypes.place.last": "Después de ellas",
   "appPlugins.wizard.fileTypes.place.off": "Desactivada",
   "appPlugins.wizard.fileTypes.title": "Tipos de archivo",
+  "appPlugins.wizard.fromManifest": "Se lee del manifiesto de la aplicación. Sus archivos se identifican por el SHA-256 que fija el manifiesto; al aprobar, filex los descarga y no instala nada que no coincida.",
   "appPlugins.wizard.fromSource": "La versión más reciente se lee desde el lugar donde se instaló la aplicación: {source}",
   "appPlugins.wizard.install": "Instalar",
   "appPlugins.wizard.jump": "Versión {from} → {to}",
