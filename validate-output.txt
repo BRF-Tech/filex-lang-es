@@ -1,21 +1,21 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : /var/lib/filex-langpacks/filex-lang-es/catalogue (filex 0.59.1+51694fdc) — 7135 strings (1456 of them the server's: emails, public pages, notifications)
+  catalogue : /var/lib/filex-langpacks/filex-lang-es/catalogue (filex 0.59.1+291812e3) — 7450 strings (1535 of them the server's: emails, public pages, notifications)
   syntax    : built-in checker (vue-i18n parser not installed)
   pack      : filex-app.json (filex-app.json)
 
-[es] 100% translated — 7135 of 7135 strings; the other 0 show in English
-  179 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[es] 100% translated — 7450 of 7450 strings; the other 0 show in English
+  183 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   12 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex Spanish pack — style check
-  catalogue    : catalogue (filex 0.59.1+51694fdc) — 7135 strings
-                 admin 3573 (vue-i18n) · explorer 2338 (plain {name}) · 232 in both · server 1456 (mails, public pages, notifications)
+  catalogue    : catalogue (filex 0.59.1+291812e3) — 7450 strings
+                 admin 3744 (vue-i18n) · explorer 2403 (plain {name}) · 232 in both · server 1535 (mails, public pages, notifications)
   plurals      : one, other — 7 extra form key(s) beyond the catalogue
-  pack         : translations/es.json  (7142 strings)
+  pack         : translations/es.json  (7457 strings)
   syntax check : built-in checker (vue-i18n parser not installed — `npm install`, or pass --src)
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 69 short English labels translated more than one way (see below)
+Consistency: 73 short English labels translated more than one way (see below)
