@@ -6493,6 +6493,7 @@
       "templates.name.page_folder": "Una carpeta compartida (sin JavaScript)",
       "templates.name.page_layout": "Diseño de página (todas las páginas de abajo)",
       "templates.name.page_pin": "Solicitud de PIN",
+      "templates.name.page_route": "Una página en la dirección de una aplicación (la vista previa de un enlace corto)",
       "templates.name.page_shell": "Página del enlace público (marco)",
       "templates.name.page_unlocked": "PIN aceptado",
       "templates.name.page_zip_wait": "Preparando un ZIP",
